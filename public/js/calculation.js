@@ -23,8 +23,9 @@ function validateDate(date){
         return false;
     }
     var hour = date.getHours();
+    var minute = date.getMinutes();
     
-    return hour >= 9 && hour <= 17;
+    return (hour >= 9 && hour < 17) || (hour == 17 && minute == 0);
 }
 
 function validateTaTime(tatime){
